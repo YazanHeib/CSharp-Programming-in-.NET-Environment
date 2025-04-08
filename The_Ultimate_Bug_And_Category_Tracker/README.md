@@ -2,7 +2,8 @@
 
 ## About This Project
 
-This project teaches how to build a structured system for tracking bugs and organizing them into categories using different storage types (SQL, JSON, Mock).  
-You’ll learn to apply design patterns like Factory and Composite, work with data hierarchies, and connect GUI elements in WPF with backend logic.  
-It also includes saving data to files in a clean, tree-like format.  
-Perfect for learning clean code, OOP design, and real-world application structure.
+Built a system to track bugs and organize them into categories using SQL, JSON, and Mock storage, Added design patterns like Factory and Composite.  
+Created a tree-like structure for the data and connected the WPF user interface to the backend logic.  
+Saved the data to files in a clean and organized format.
+ Focused on writing clean code and building a real-world application with OOP.
+
