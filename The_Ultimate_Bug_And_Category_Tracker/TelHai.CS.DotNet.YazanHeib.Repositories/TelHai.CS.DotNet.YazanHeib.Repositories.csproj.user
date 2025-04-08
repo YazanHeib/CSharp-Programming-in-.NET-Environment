@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="BugWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChooseCateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GraphicElements\AddSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GraphicElements\AddWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GraphicElements\UpdateSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GraphicElements\UpdateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BugWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChooseCateWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GraphicElements\AddSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GraphicElements\AddWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GraphicElements\UpdateSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GraphicElements\UpdateWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

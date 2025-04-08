@@ -1,0 +1,61 @@
+﻿<Window x:Class="TelHai.CS.DotNet.YazanHeib.Repositories.BugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelHai.CS.DotNet.YazanHeib.Repositories"
+        mc:Ignorable="d"
+        Title="Bug Window" Height="450" Width="820">
+    <Grid Margin="10">
+
+
+        <!--Grid Row Definitions-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <!--Adding The Data By User, And 'ADD' Button-->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Background="#E3F2FD">
+            <TextBox x:Name="TitleTextBox" Width="200" Margin="0,0,10,0" Text="Please Enter A Title:" GotFocus="TitleTextBox_GotFocus" LostFocus="TitleTextBox_LostFocus"  Background="WhiteSmoke"/>
+            <TextBox x:Name="DescriptionTextBox" Width="250" Margin="0,0,10,0" Text="Please Enter A Description:" GotFocus="DescriptionTextBox_GotFocus" LostFocus="DescriptionTextBox_LostFocus" Background="WhiteSmoke"/>
+
+            <ComboBox x:Name="StatusComboBox" Width="150" FontWeight="Bold">
+                <ComboBoxItem Content="Open" Foreground="#81C784"/>
+                <ComboBoxItem Content="In Progress" Foreground="#64B5F6"/>
+                <ComboBoxItem Content="Closed" Foreground="#E57373"/>
+            </ComboBox>
+
+            <Button x:Name="SelectCategoryBtn"  Content="📂 Select Category" Width="150" Background="#E91E63" Foreground="White" FontWeight="Bold" Margin="10,0,0,0" Click="SelectCategoryBtn_Click">
+
+            </Button>
+
+        </StackPanel>
+
+
+        <!--Table To Show The Data At The Data Base.-->
+        <DataGrid x:Name="BugDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" SelectionMode="Single" Background="White" AlternatingRowBackground="#E3F2FD">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bug ID" Binding="{Binding BugID}" Width="50"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="200"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="300"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="150"/>
+                <DataGridTextColumn Header="Category ID" Binding="{Binding CategoryId}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <!--Button's Of Delte And Update-->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0" Background="#E3F2FD">
+            <Button Content="📋 Add Bug" Width="165" Margin="0,0,20,0" Click="AddBug_Click" Background="#81C784" Foreground="White" FontWeight="Bold"/>
+            <Button Content="🗑 Delete Selected Bug" Width="165" Margin="0,0,20,0" Click="DeleteBug_Click" Background="#E57373" Foreground="White" FontWeight="Bold"/>
+            <Button Content="🔄 Update Selected Bug" Width="165" Click="UpdateBug_Click" Background="#64B5F6" Foreground="White" FontWeight="Bold"/>
+            <Button Content="🏠 Return To Main Menu" Width="165" Margin="20,0,0,0" Click="ReturnToMainMenu_Click" Background="#FF9800" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+
+
+    </Grid>
+
+</Window>
